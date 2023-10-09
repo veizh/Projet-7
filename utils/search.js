@@ -1,20 +1,21 @@
 function actualCount(cards){
   let nombre = 0
-  cards.forEach(card=>{
-     if(card.state===true){
-    nombre+=1
+  for(let i = 0; i< cards.length;i++){
+    if(cards[i].state===true){
+      nombre+=1
+    }
   }
-  })
+ 
  
   document.querySelector('.information-nombre').innerHTML= nombre+" recettes"
 }
 
 export function search(cards) {
-
- cards.forEach(e=>{
-  e.filterAll()
+  for(let i = 0; i< cards.length;i++){
+    
+  cards[i].filterAll()
  
- })
+  }
  actualCount(cards)
 }
 
@@ -34,6 +35,10 @@ function searchOption(cards, option) {
     }
   })
 }
+//
+//verifier ingr et verifier ustensil n'utilise pas la bonne methode 
+//
+//
 export function verifierIngr(element,value){
     let test =element.map(e=>e.ingredient.toLowerCase())
     let bl = test.includes(value.toLowerCase())

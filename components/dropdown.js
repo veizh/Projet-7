@@ -42,8 +42,6 @@ class dropdown {
       case "Appareils":
         AllCards.forEach((element) => {
           if (element.state) {
-            console.log(tmp);
-            console.log(!tmp.includes(element.appliances.toLowerCase()));
             if (!tmp.includes(element.appliances.toLowerCase())) {
               tmp.push(element.appliances.toLowerCase());
             }

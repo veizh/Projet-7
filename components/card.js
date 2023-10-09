@@ -51,16 +51,17 @@ class card {
     if (this.name.toLowerCase().search(tmp.value.toLowerCase()) !== -1) {
       test = true;
     }
-    this.ingredients.forEach((e) => {
-      if (e.ingredient.toLowerCase().search(tmp.value.toLowerCase()) !== -1) {
+    for(let i =0;i<this.ingredients.length;i++) {
+
+      if (this.ingredients[i].ingredient.toLowerCase().search(tmp.value.toLowerCase()) !== -1) {
         test = true;
       }
-    });
-    this.ustensils.forEach((e) => {
-      if (e.toLowerCase().search(tmp.value.toLowerCase()) !== -1) {
+    };
+    for(let i =0;i<this.ustensils.length;i++) {
+      if ( this.ustensils[i].toLowerCase().search(tmp.value.toLowerCase()) !== -1) {
         test = true;
       }
-    });
+    };
 
     return test
   }
