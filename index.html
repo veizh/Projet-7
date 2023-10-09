@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/card/card.css" />
+    <link rel="stylesheet" href="style/global/global.css" />
+    <title>Les petits plats</title>
+
+    <script type="module" src="./app.js" defer></script>
+  </head>
+  <body>
+    <section class="top-section">
+      <header><img src="./media//svg/logo.svg" /></header>
+      <img src="./media/images/bg.png" class="background" alt="photo du plat" />
+      <div class="slogan">
+        CHERCHEZ PARMI PLUS DE 1500 RECETTES DU QUOTIDIEN,SIMPLES ET DÉLICIEUSES
+      </div>
+      <div class="research-container">
+        <input
+        class="search"
+          type="text"
+          placeholder="Rechercher une recette, un ingrédient, ..."
+          value=""
+        />
+        <button>
+          <svg
+            width="51"
+            height="52"
+            viewBox="0 0 51 52"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="51" height="52" rx="10" fill="#1B1B1B"></rect>
+            <circle cx="22" cy="22" r="9.5" stroke="white"></circle>
+            <line
+              x1="30.3536"
+              y1="30.6464"
+              x2="39.3536"
+              y2="39.6464"
+              stroke="white"
+            ></line>
+          </svg>
+        </button>
+      </div>
+    </section>
+    <main>
+      <div class="container-filters">
+        <div class="container-dropdown"> </div>
+        <div class="information-nombre"> </div>
+      </div>
+      <div class="container-tags"></div>
+      <div class="container-cards"></div>
+    </main>
+  </body>
+</html>

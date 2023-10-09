@@ -1,0 +1,91 @@
+.none {
+  display: none;
+}
+
+.hide {
+  display: none !important;
+}
+
+.card {
+  width: 90%;
+  max-width: 380px;
+  height: 731px;
+  border-radius: 21px;
+  box-shadow: 0px 4px 34px 30px rgba(0, 0, 0, 0.07);
+  position: relative;
+  overflow: hidden;
+}
+.card .photo-container {
+  position: relative;
+  width: 100%;
+  height: 253px;
+}
+.card .photo-container img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  filter: brightness(0.9);
+}
+.card .time {
+  background-color: #FFD15B;
+  color: #1B1B1B;
+  font-size: 14px;
+  border-radius: 14px;
+  display: flex;
+  font-weight: bolder;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 10px;
+  position: absolute;
+  top: 15px;
+  z-index: 3;
+  right: 15px;
+}
+.card article {
+  z-index: 3;
+  width: 100%;
+  padding: 32px 25px 25px 25px;
+  overflow-y: scroll;
+  padding-bottom: 20px;
+  height: 480px;
+}
+.card article::-webkit-scrollbar {
+  display: none;
+}
+.card article h1 {
+  margin-bottom: 32px;
+}
+.card article H2 {
+  font-family: "Manrope", sans-serif;
+  color: #7A7A7A;
+  font-size: 14px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.card article P {
+  color: #1B1B1B;
+  font-size: 14px;
+}
+.card article P.description {
+  margin-bottom: 32px;
+}
+.card article .quantite {
+  color: #7A7A7A;
+}
+.card article .container-ingredient {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.card article .container-ingredient .component-ingredient {
+  width: 45%;
+  font-weight: 600;
+}/*# sourceMappingURL=card.css.map */
