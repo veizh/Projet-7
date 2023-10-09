@@ -10,42 +10,14 @@ function actualCount(cards){
 }
 
 export function search(cards) {
- // let currentArray = filterByTags(cards);
- // currentArray.forEach((element) => {
- //   if (
- //     element.name.toLowerCase().includes(value.toLowerCase().trim()) ||
- //     element.description.toLowerCase().includes(value.toLowerCase().trim())
- //   ) {
- //     element.toggleState(true);
- //   } else {
- //     element.toggleState(false);
- //   }
- // });
- // document.querySelector(".information-nombre").innerHTML = " recettes";
+
  cards.forEach(e=>{
   e.filterAll()
  
  })
  actualCount(cards)
 }
-//export function filterByTags(cards) {
-//  // me permet de filtrer
-//  let tags = createArrayFromTags(cards);
-//  let newArray = [];
-//  if (tags.length === 0) {
-//    newArray = cards;
-//    return newArray;
-//  }
-//  tags.forEach((e) => {
-//    searchOption(cards, e);
-//  })
-//  cards.forEach(e=>{
-//    if(cards.state){
-//        newArray.push(e)
-//    }
-//  })
-//  return newArray;
-//}
+
 
 function searchOption(cards, option) {
   cards.forEach((element) => {
@@ -62,10 +34,6 @@ function searchOption(cards, option) {
     }
   })
 }
-//
-//verifier ingr et verifier ustensil n'utilise pas la bonne methode 
-//
-//
 export function verifierIngr(element,value){
     let test =element.map(e=>e.ingredient.toLowerCase())
     let bl = test.includes(value.toLowerCase())
