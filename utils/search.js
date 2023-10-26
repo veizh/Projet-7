@@ -7,34 +7,35 @@ function actualCount(cards){
   }
  
  
-  document.querySelector('.information-nombre').innerHTML= nombre+" recettes"
+  document.querySelector('.information-nombre').innerHTML= `${nombre} recette${
+    nombre < 2 ? "" : "s"}`
+    if(nombre===0){
+      document.querySelector(".noResult").style.display="block"
+    }
+    else{
+        document.querySelector(".noResult").style.display="none"
+      
+    }
 }
 
 export function search(cards) {
+  let start =+ new Date()
   for(let i = 0; i< cards.length;i++){
     
   cards[i].filterAll()
  
   }
  actualCount(cards)
+ setTimeout(()=>{
+  let end =+ new Date()
+  let tmp = document.querySelector(".search");
+  console.log(tmp.value,"prends",end - start -2000+ " ms à etre trié");
+ },2000)
+ 
 }
 
 
-function searchOption(cards, option) {
-  cards.forEach((element) => {
-    if (element.state) {
-        console.log("un debut");
-      if( verifierIngr(element,option) || verifierUstensil(element,option) || verifierappareil(element,option)){
-        console.log("dans le vrai");
-        element.toggleState(true)
-      }
-      else{
-        element.toggleState(false)
-      }
-      
-    }
-  })
-}
+
 //
 //verifier ingr et verifier ustensil n'utilise pas la bonne methode 
 //

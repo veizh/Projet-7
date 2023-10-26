@@ -246,4 +246,14 @@ main .container-cards {
 
 .hide {
   display: none !important;
+}
+
+.noResult {
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: rgb(131, 0, 0);
+  font-size: 18px;
 }/*# sourceMappingURL=global.css.map */
